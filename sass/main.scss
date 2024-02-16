@@ -112,6 +112,44 @@ body {
 	}
 }
 
+.nav {
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background-image: $blue-gradient-solid;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__item {
+		position: relative;
+		display: block;
+		color: $pure-white;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		text-decoration: none;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			background-color: $pure-white;
+			content: '';
+			transform: scaleY(0);
+			transition: transform 0.3s;
+		}
+
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
+}
+
 @media (min-width: 768px) {
 	.white-block {
 		height: 50px;
