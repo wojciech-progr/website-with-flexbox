@@ -508,9 +508,9 @@ body {
 	}
 
 	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
 	}
-	margin-bottom: 0.5em;
-	text-transform: uppercase;
 
 	&__form-input {
 		@include contactForm;
